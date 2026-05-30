@@ -744,14 +744,19 @@ function Footer() {
             © {new Date().getFullYear()} CRIMSON FREQUENCY
           </span>
         </div>
-        <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-mono">
-          Booking ·{" "}
-          <button
-            onClick={comingSoon}
-            className="hover:text-primary transition-colors"
-          >
-            bookings@soundmastert.com
-          </button>
+        <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-mono text-center sm:text-right">
+          <div>
+            Booking ·{" "}
+            <button
+              onClick={comingSoon}
+              className="hover:text-primary transition-colors"
+            >
+              bookings@soundmastert.com
+            </button>
+          </div>
+          <div className="mt-3 text-[9px] tracking-[0.2em] text-white/30">
+            Designed & Managed by <a href="https://pmediadata.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Platinum Media Marketing</a>
+          </div>
         </div>
       </div>
     </footer>
