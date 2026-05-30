@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>SoundMaster T — Dark House / Techno</title>
+    <meta
+      name="description"
+      content="SoundMaster T. A dark house and techno reawakening. Chicago roots, Atlanta heat, global frequencies." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- AI VISIBILITY & GEO SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["MusicGroup", "Person"],
+          "@id": "https://soundmastert.com/#artist",
+          "name": "Soundmaster T",
+          "alternateName": "Edward Terry",
+          "url": "https://soundmastert.com",
+          "genre": ["Hip Hop", "Ghetto House", "Dance", "Techno"],
+          "sameAs": [
+            "https://open.spotify.com/artist/PLACEHOLDER",
+            "https://music.apple.com/us/artist/PLACEHOLDER",
+            "https://www.youtube.com/channel/PLACEHOLDER"
+          ],
+          "track": {
+            "@type": "MusicRecording",
+            "name": "Too Much Booty in the Pants",
+            "url": "https://soundmastert.com"
+          }
+        },
+        {
+          "@type": "MusicEvent",
+          "@id": "https://soundmastert.com/#tour",
+          "name": "Soundmaster T - 2026 Tour",
+          "performer": {
+            "@id": "https://soundmastert.com/#artist"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "TBD"
+          },
+          "startDate": "2026-06-01T20:00",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://soundmastert.com/tickets",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+
+</html>
