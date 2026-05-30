@@ -17,7 +17,7 @@ import {
 // Asset URLs (compressed webp variants, tied to project lifecycle)
 const HERO_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-hero-WEeF22b7DrnLH6CiPVCePx.webp";
-const PORTRAIT_IMG = "/manus-storage/soundmaster-portrait-v2_3ea7de1e.png";
+const PORTRAIT_IMG = "/soundmaster-portrait.png";
 const TEXTURE_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-texture-c4TfZ8m4ETLng6yLRV2XBR.webp";
 const RELEASE_EREBUS =
