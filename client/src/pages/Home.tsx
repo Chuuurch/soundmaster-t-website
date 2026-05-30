@@ -249,7 +249,7 @@ function Hero() {
       </div>
       <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-white/40">
         <span className="[writing-mode:vertical-rl]">
-          Dark House / Techno — 2026
+          House / Techno — 2026
         </span>
       </div>
 
