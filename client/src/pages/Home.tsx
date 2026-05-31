@@ -270,7 +270,7 @@ function Hero() {
         </h1>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <p className="md:col-span-5 text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
-            A pioneer of Chicago ghetto house since 1996 — the sound that
+            A pioneer of Chicago ghetto house since 1996 and creator of the legendary anthem "2 Much Booty (In The Pants)" — the sound that
             cracked open block parties, ruled B96, WGCI and Power 92, and
             shook Atlanta for decades. Today that legacy lives on, sharpened
             into the house and techno moving floors right now.
