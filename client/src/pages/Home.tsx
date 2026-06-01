@@ -340,15 +340,34 @@ function Sound() {
       <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Image */}
         <div ref={ref} className="fade-up lg:col-span-5 relative">
-          <div className="relative aspect-square w-full overflow-hidden border border-white/10">
+          <div className="relative aspect-square w-full overflow-hidden border border-white/10 bg-black">
             <img
               src={PORTRAIT_IMG}
               alt="SoundMaster T in red light"
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 grain pointer-events-none" />
-            <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.35em] text-white/60 font-mono">
+            
+            {/* Animated smoke overlays for the portrait */}
+            <div
+              className="smoke-layer smoke-front-1 mix-blend-screen opacity-50"
+              style={{
+                backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/smoke-plume-WaVcE2Ysjnam2BeeBLSUPJ.webp')",
+                backgroundPosition: "center bottom",
+                zIndex: 1,
+              }}
+            />
+            <div
+              className="smoke-layer smoke-2 mix-blend-screen opacity-60"
+              style={{
+                backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/smoke-plume-WaVcE2Ysjnam2BeeBLSUPJ.webp')",
+                backgroundPosition: "30% bottom",
+                zIndex: 1,
+              }}
+            />
+
+            <div className="absolute inset-0 grain pointer-events-none z-10" />
+            <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.35em] text-white/60 font-mono z-10 drop-shadow-md">
               File · 001 / Profile
             </div>
           </div>
