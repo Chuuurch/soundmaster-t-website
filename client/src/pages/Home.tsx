@@ -249,7 +249,7 @@ function Hero() {
       </div>
       <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-white/40">
         <span className="[writing-mode:vertical-rl]">
-          Dark House / Techno — 2026
+          House Music Pioneer | Chicago
         </span>
       </div>
 
@@ -270,7 +270,7 @@ function Hero() {
         </h1>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <p className="md:col-span-5 text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
-            A pioneer of Chicago ghetto house since 1996 — the sound that
+            A pioneer of Chicago ghetto house since 1996 and creator of the legendary anthem "2 Much Booty (In The Pants)" — the sound that
             cracked open block parties, ruled Chicago radio, ATL radio, and Miami radio stations, and
             shook Atlanta for decades. Now dropping a massive new anthem with Tonio Armani and Lil Jon. Today that legacy lives on, sharpened
             into the house and techno moving floors right now.
@@ -340,15 +340,34 @@ function Sound() {
       <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Image */}
         <div ref={ref} className="fade-up lg:col-span-5 relative">
-          <div className="relative aspect-square w-full overflow-hidden border border-white/10">
+          <div className="relative aspect-square w-full overflow-hidden border border-white/10 bg-black">
             <img
               src={PORTRAIT_IMG}
               alt="SoundMaster T in red light"
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 grain pointer-events-none" />
-            <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.35em] text-white/60 font-mono">
+            
+            {/* Animated smoke overlays for the portrait */}
+            <div
+              className="smoke-layer smoke-front-1 mix-blend-screen opacity-50"
+              style={{
+                backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/smoke-plume-WaVcE2Ysjnam2BeeBLSUPJ.webp')",
+                backgroundPosition: "center bottom",
+                zIndex: 1,
+              }}
+            />
+            <div
+              className="smoke-layer smoke-2 mix-blend-screen opacity-60"
+              style={{
+                backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/smoke-plume-WaVcE2Ysjnam2BeeBLSUPJ.webp')",
+                backgroundPosition: "30% bottom",
+                zIndex: 1,
+              }}
+            />
+
+            <div className="absolute inset-0 grain pointer-events-none z-10" />
+            <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.35em] text-white/60 font-mono z-10 drop-shadow-md">
               File · 001 / Profile
             </div>
           </div>
@@ -744,14 +763,19 @@ function Footer() {
             © {new Date().getFullYear()} SOUNDAMATICS LLC
           </span>
         </div>
-        <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-mono">
-          Booking ·{" "}
-          <button
-            onClick={comingSoon}
-            className="hover:text-primary transition-colors"
-          >
-            bookings@soundmastert.com
-          </button>
+        <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-mono text-center sm:text-right">
+          <div>
+            Booking ·{" "}
+            <button
+              onClick={comingSoon}
+              className="hover:text-primary transition-colors"
+            >
+              bookings@soundmastert.com
+            </button>
+          </div>
+          <div className="mt-3 text-[9px] tracking-[0.2em] text-white/30">
+            Designed & Managed by <a href="https://pmediadata.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Platinum Media Marketing</a>
+          </div>
         </div>
       </div>
     </footer>
