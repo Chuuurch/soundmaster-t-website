@@ -20,6 +20,7 @@ const PLAYLIST = [
     artist: "SoundMaster T",
     src: "/audio/2-much-booty.mp3",
     spotifyUrl: "https://open.spotify.com/artist/PLACEHOLDER",
+    gain: 0.6, // Mastered louder, so we turn it down to balance
   },
   {
     id: 2,
@@ -27,12 +28,13 @@ const PLAYLIST = [
     artist: "Tonio Armani, Lil Jon, Ying Yang Twins",
     src: "/audio/big-ole-butt.mp3",
     spotifyUrl: "https://open.spotify.com/artist/PLACEHOLDER",
+    gain: 1.0, // Mastered quieter, so we leave it at max
   }
 ];
 
 export function GlobalPlayer() {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Autoplay on load
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(0.8);
   const [isMuted, setIsMuted] = useState(false);
@@ -53,15 +55,21 @@ export function GlobalPlayer() {
   // Sync state to audio element
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = isMuted ? 0 : volume;
+      // Apply the track's specific gain modifier to the overall volume
+      const currentGain = currentTrack.gain || 1.0;
+      audioRef.current.volume = isMuted ? 0 : volume * currentGain;
+      
       if (isPlaying) {
-        // We catch the promise rejection if audio fails to play (e.g. no user interaction yet)
-        audioRef.current.play().catch((e) => console.log("Autoplay prevented", e));
+        // We catch the promise rejection if audio fails to play (browsers often block autoplay)
+        audioRef.current.play().catch((e) => {
+          console.log("Autoplay prevented by browser", e);
+          setIsPlaying(false); // Revert to paused if the browser blocked it
+        });
       } else {
         audioRef.current.pause();
       }
     }
-  }, [isPlaying, currentTrackIndex, volume, isMuted]);
+  }, [isPlaying, currentTrackIndex, volume, isMuted, currentTrack]);
 
   const togglePlay = () => setIsPlaying(!isPlaying);
 
