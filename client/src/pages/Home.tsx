@@ -270,10 +270,7 @@ function Hero() {
         </h1>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <p className="md:col-span-5 text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
-            A pioneer of Chicago ghetto house since 1996 and creator of the legendary anthem "2 Much Booty (In The Pants)" — the sound that
-            cracked open block parties, ruled Chicago radio, ATL radio, and Miami radio stations, and
-            shook Atlanta for decades. Now dropping a massive new anthem with Tonio Armani and Lil Jon. Today that legacy lives on, sharpened
-            into the house and techno moving floors right now.
+            SoundMaster T is the composer behind "2 Much Booty (In Da Pants)" — the Miami Bass cult record that got sampled on Tonio Armani × Lil Jon's "Big Ole Butt" via Death Row. Track's been in continuous cultural circulation for 30+ years.
           </p>
           <div className="md:col-span-7 flex flex-wrap items-center gap-3 md:justify-end">
             <Button
@@ -399,7 +396,7 @@ function Sound() {
               dominating dancefloors today.
             </p>
             <p>
-              Now he steps forward again, dropping a massive new anthem with Tonio Armani and Lil Jon. 
+              Now his influence steps forward again, officially sampled on Tonio Armani and Lil Jon's "Big Ole Butt" via Death Row Records. 
               Same instincts, evolved palette. The drums are still hard, the energy is still grown in Chicago,
               but the lens is contemporary: modern house and techno that
               honor the lineage without ever looking backward.
