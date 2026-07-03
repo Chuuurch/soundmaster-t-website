@@ -340,8 +340,8 @@ function Sound() {
           <div className="relative aspect-square w-full overflow-hidden border border-white/10 bg-black">
             <img
               src="/soundmaster-portrait.jpg"
-              alt="SoundMaster T in red light"
-              className="w-full h-full object-cover"
+              alt="SoundMaster T on the decks"
+              className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen hover:grayscale-0 hover:opacity-100 transition-all duration-700"
               loading="lazy"
             />
             
