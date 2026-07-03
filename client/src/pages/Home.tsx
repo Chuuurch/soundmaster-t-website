@@ -346,7 +346,7 @@ function Sound() {
             <img
               src={PORTRAIT_IMG}
               alt="SoundMaster T on the decks"
-              className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              className="w-full h-full object-cover opacity-90 mix-blend-screen animate-pulse transition-all duration-700"
               loading="lazy"
             />
             
