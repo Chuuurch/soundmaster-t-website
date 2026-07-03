@@ -392,15 +392,15 @@ function Sound() {
               car speakers, basements, and back-of-the-club rotations.
             </p>
             <p>
-              His records found a permanent home on B96, WGCI and Power 92,
+              His records found a permanent home on Chicago radio, ATL radio, and Miami radio stations,
               and lit Atlanta up for years as the city adopted his sound as
               its own. The catalog moved units, the cuts moved bodies, and
               the influence quietly traveled into the DNA of the music
               dominating dancefloors today.
             </p>
             <p>
-              Now he steps forward again — same instincts, evolved palette.
-              The drums are still hard, the energy is still grown in Chicago,
+              Now he steps forward again, dropping a massive new anthem with Tonio Armani and Lil Jon. 
+              Same instincts, evolved palette. The drums are still hard, the energy is still grown in Chicago,
               but the lens is contemporary: modern house and techno that
               honor the lineage without ever looking backward.
             </p>
@@ -545,7 +545,7 @@ function Legacy() {
               icon={<Radio className="h-4 w-4" />}
               year="Late ’90s — 2000s"
               title="Chicago Airwaves"
-              copy="Spun in heavy rotation on the dials that built the city: B96, WGCI and Power 92. Heard between rush-hour traffic and 3AM headphones across the Midwest — records that crossed over without ever losing the streets."
+              copy="Spun in heavy rotation on the dials that built the city: Chicago radio, ATL radio, and Miami radio stations. Heard between rush-hour traffic and 3AM headphones across the Midwest — records that crossed over without ever losing the streets."
             />
             <LegacyRow
               icon={<MapPin className="h-4 w-4" />}
