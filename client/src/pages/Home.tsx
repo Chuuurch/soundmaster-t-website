@@ -17,7 +17,7 @@ import {
 // Asset URLs (compressed webp variants, tied to project lifecycle)
 const HERO_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-hero-WEeF22b7DrnLH6CiPVCePx.webp";
-const PORTRAIT_IMG = "/manus-storage/soundmaster-portrait-v2_3ea7de1e.png";
+const PORTRAIT_IMG = "/soundmaster-portrait.png";
 const TEXTURE_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-texture-c4TfZ8m4ETLng6yLRV2XBR.webp";
 const RELEASE_EREBUS =
@@ -38,9 +38,9 @@ const NAV_LINKS = [
 const MARQUEE_ITEMS = [
   "SINCE 1996",
   "GHETTO HOUSE",
-  "B96 CHICAGO",
-  "WGCI",
-  "POWER 92",
+  "CHICAGO RADIO",
+  "ATL RADIO",
+  "MIAMI RADIO",
   "ATLANTA",
   "SOUTHSIDE",
   "CHICAGO ORIGINATOR",
@@ -271,8 +271,8 @@ function Hero() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <p className="md:col-span-5 text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
             A pioneer of Chicago ghetto house since 1996 — the sound that
-            cracked open block parties, ruled B96, WGCI and Power 92, and
-            shook Atlanta for decades. Today that legacy lives on, sharpened
+            cracked open block parties, ruled Chicago radio, ATL radio, and Miami radio stations, and
+            shook Atlanta for decades. Now dropping a massive new anthem with Tonio Armani and Lil Jon. Today that legacy lives on, sharpened
             into the house and techno moving floors right now.
           </p>
           <div className="md:col-span-7 flex flex-wrap items-center gap-3 md:justify-end">
@@ -741,7 +741,7 @@ function Footer() {
         <div className="font-display uppercase text-sm tracking-[0.25em]">
           SoundMaster <span className="text-primary">T</span>
           <span className="ml-3 text-white/40 text-[10px] tracking-[0.3em]">
-            © {new Date().getFullYear()} CRIMSON FREQUENCY
+            © {new Date().getFullYear()} SOUNDAMATICS LLC
           </span>
         </div>
         <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-mono">

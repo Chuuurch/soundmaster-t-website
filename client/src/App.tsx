@@ -23,6 +23,8 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
+import { GlobalPlayer } from "./components/GlobalPlayer";
+
 function App() {
   return (
     <ErrorBoundary>
@@ -33,6 +35,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <GlobalPlayer />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
