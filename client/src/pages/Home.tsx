@@ -402,7 +402,7 @@ function Sound() {
               honor the lineage without ever looking backward.
             </p>
             <p>
-              Looking ahead, the momentum isn't slowing down. This summer, SoundMaster T is dropping a massive new house music project under SoundamaticS — teaming up with Chuuurch $ and C.O. Tha! Bad Black to merge his classic ghetto house roots with a fresh, relentless new energy.
+              Looking ahead, the momentum isn't slowing down. This summer, SoundMaster T is dropping a massive new house music project under SoundamaticS — teaming up with Chuuurch $ and C.O. Tha! Bad Black to merge his classic ghetto house roots with a fresh, relentless new energy. Fans can also look out for the highly anticipated "2 Much Booty 2026 ReBooty Mix" dropping July 25th on SoundamaticS LLC.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
