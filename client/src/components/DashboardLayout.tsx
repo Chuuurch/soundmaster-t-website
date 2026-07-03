@@ -1,4 +1,4 @@
-import { useAuth } from "@/_core/hooks/useAuth";
+const useAuth = () => ({ user: { name: "", email: "" }, loading: false, logout: () => {} });
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,

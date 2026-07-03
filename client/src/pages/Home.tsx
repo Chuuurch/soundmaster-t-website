@@ -670,19 +670,44 @@ function ShowRow({
   );
 }
 
+import { trpc } from "@/lib/trpc";
+import { Loader2 } from "lucide-react";
+
 function Contact() {
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    date: "",
+    message: "",
+  });
+
+  const mutation = trpc.booking.submit.useMutation({
+    onSuccess: () => {
+      toast("Booking inquiry sent.", {
+        description: "We'll get back to you shortly.",
+      });
+      setFormData({ name: "", email: "", date: "", message: "" });
+    },
+    onError: (error) => {
+      toast.error("Failed to send inquiry", {
+        description: error.message || "Please try again later.",
+      });
+    },
+  });
+
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) {
-      toast("Enter a valid email to tune in.");
+    if (!formData.name || !formData.email) {
+      toast.error("Name and email are required.");
       return;
     }
-    toast("You're on the frequency.", {
-      description: "We'll only ping you when something heavy drops.",
-    });
-    setEmail("");
+    mutation.mutate(formData);
   };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <section id="contact" className="relative py-28 sm:py-40 overflow-hidden">
       <div className="absolute inset-0">
@@ -697,33 +722,68 @@ function Contact() {
       <div className="relative container max-w-3xl text-center">
         <div className="flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.4em] text-primary mb-6 font-mono">
           <span className="h-px w-8 bg-primary" />
-          05 — Signal
+          05 — Bookings
           <span className="h-px w-8 bg-primary" />
         </div>
         <h2 className="font-display uppercase text-5xl sm:text-7xl leading-[0.9] mb-8">
-          Tune <span className="text-primary">In.</span>
+          Lock <span className="text-primary">It In.</span>
         </h2>
         <p className="text-white/60 max-w-lg mx-auto mb-10 leading-relaxed">
-          New releases, secret sets, after-hours invites. Low frequency,
-          high signal — drop your email below.
+          For all booking inquiries, collaborations, and private sets — drop your details below and management will connect.
         </p>
         <form
           onSubmit={onSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+          className="flex flex-col gap-4 max-w-lg mx-auto text-left"
         >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name / Agency"
+              disabled={mutation.isPending}
+              className="h-12 px-4 bg-black/60 border border-white/15 focus:border-primary outline-none text-sm placeholder:text-white/30 rounded-none transition-colors disabled:opacity-50"
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              disabled={mutation.isPending}
+              className="h-12 px-4 bg-black/60 border border-white/15 focus:border-primary outline-none text-sm placeholder:text-white/30 rounded-none transition-colors disabled:opacity-50"
+            />
+          </div>
           <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="your@frequency.com"
-            className="flex-1 h-12 px-4 bg-black/60 border border-white/15 focus:border-primary outline-none text-sm placeholder:text-white/30 rounded-none transition-colors"
+            type="text"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            placeholder="Requested Date(s) / Location"
+            disabled={mutation.isPending}
+            className="h-12 px-4 bg-black/60 border border-white/15 focus:border-primary outline-none text-sm placeholder:text-white/30 rounded-none transition-colors disabled:opacity-50"
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Details (Venue, Capacity, Offer, etc.)"
+            rows={4}
+            disabled={mutation.isPending}
+            className="p-4 bg-black/60 border border-white/15 focus:border-primary outline-none text-sm placeholder:text-white/30 rounded-none transition-colors disabled:opacity-50 resize-none"
           />
           <Button
             type="submit"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none uppercase tracking-[0.2em] text-xs px-6 h-12"
+            disabled={mutation.isPending}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none uppercase tracking-[0.2em] text-xs px-6 h-12 mt-2 w-full sm:w-auto self-end"
           >
-            <Send className="mr-2 h-3 w-3" />
-            Subscribe
+            {mutation.isPending ? (
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="mr-2 h-3 w-3" />
+            )}
+            Send Inquiry
           </Button>
         </form>
         <div className="mt-12 flex items-center justify-center gap-6 text-white/40">
