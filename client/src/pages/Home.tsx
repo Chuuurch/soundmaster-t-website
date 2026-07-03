@@ -160,7 +160,13 @@ function Nav() {
           variant="default"
           size="sm"
           className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none uppercase tracking-[0.18em] text-[10px] px-4"
-          onClick={comingSoon}
+          onClick={() => {
+            const audio = document.getElementById("global-audio-player") as HTMLAudioElement;
+            if (audio) {
+              audio.play().catch(console.error);
+              window.dispatchEvent(new Event("syncGlobalPlayerState"));
+            }
+          }}
         >
           Listen
           <ArrowUpRight className="ml-1 h-3 w-3" />
