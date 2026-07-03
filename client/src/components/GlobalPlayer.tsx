@@ -112,7 +112,7 @@ export function GlobalPlayer() {
   };
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 bg-black/90 backdrop-blur-xl border-t border-white/10 text-white p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-4">
+    <div className="fixed bottom-0 inset-x-0 z-50 bg-black/40 backdrop-blur-3xl border-t border-white/10 shadow-[0_-8px_32px_rgba(0,0,0,0.8)] text-white p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-4">
       {/* Hidden audio element */}
       <audio
         ref={audioRef}
