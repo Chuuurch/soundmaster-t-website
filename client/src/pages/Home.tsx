@@ -339,7 +339,7 @@ function Sound() {
         <div ref={ref} className="fade-up lg:col-span-5 relative">
           <div className="relative aspect-square w-full overflow-hidden border border-white/10 bg-black">
             <img
-              src={PORTRAIT_IMG}
+              src="/soundmaster-portrait.jpg"
               alt="SoundMaster T in red light"
               className="w-full h-full object-cover"
               loading="lazy"
