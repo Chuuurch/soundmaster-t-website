@@ -15,8 +15,8 @@ import {
 } from "lucide-react";
 
 // Asset URLs
-const HERO_IMG = "/soundmaster-portrait.jpg";
-const PORTRAIT_IMG = "/soundmaster-portrait.jpg";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-hero-WEeF22b7DrnLH6CiPVCePx.webp";
+const PORTRAIT_IMG = "/soundmaster-portrait.png";
 const TEXTURE_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-texture-c4TfZ8m4ETLng6yLRV2XBR.webp";
 const RELEASE_EREBUS =
@@ -344,7 +344,7 @@ function Sound() {
         <div ref={ref} className="fade-up lg:col-span-5 relative">
           <div className="relative aspect-square w-full overflow-hidden border border-white/10 bg-black">
             <img
-              src="/soundmaster-portrait.jpg"
+              src={PORTRAIT_IMG}
               alt="SoundMaster T on the decks"
               className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen hover:grayscale-0 hover:opacity-100 transition-all duration-700"
               loading="lazy"
