@@ -14,10 +14,9 @@ import {
   Disc3 as SoundIcon,
 } from "lucide-react";
 
-// Asset URLs (compressed webp variants, tied to project lifecycle)
-const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-hero-WEeF22b7DrnLH6CiPVCePx.webp";
-const PORTRAIT_IMG = "/soundmaster-portrait.png";
+// Asset URLs
+const HERO_IMG = "/soundmaster-portrait.jpg";
+const PORTRAIT_IMG = "/soundmaster-portrait.jpg";
 const TEXTURE_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663221459846/bytFLjvuumtTzp4bwtQF6c/soundmaster-texture-c4TfZ8m4ETLng6yLRV2XBR.webp";
 const RELEASE_EREBUS =
